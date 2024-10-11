@@ -75,8 +75,7 @@ class InstallController extends Controller
         $integration = Integration::updateOrCreate(
             ['retail_url' => $url],
             [
-                'retail_token' => $apikey,
-                'apikey' => $apikey,
+                'retail_token' => $apikey
             ]
         );
 
