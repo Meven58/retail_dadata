@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Integraions extends Model
+class Integrations extends Model
 {
     use HasFactory;
 
@@ -14,6 +14,8 @@ class Integraions extends Model
     protected $fillable = [
         'id',
         'retail_url',
+        'active',
+        'selected_inputs',
         'retail_token',
         'dadata_apiKey',
         'dadata_secretKey',

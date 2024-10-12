@@ -15,8 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('retail_url')->nullable();
             $table->string('retail_token')->nullable();
-            $table->string('dadata_apiKey')->nullable();
-            $table->string('dadata_secretKey')->nullable();
+            $table->boolean('active')->default(true);
+            $table->json('selected_inputs')->nullable();
             $table->timestamps();
         });
     }
