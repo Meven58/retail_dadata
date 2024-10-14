@@ -40,10 +40,8 @@ class updateCustomersCorporateBusinessInfo extends Command
 
         if ($id <= 0) {
             $allClients = Integrations::all()->toArray();
-            Log::debug($allClients);
         } else {
-            $allClients[] = Integrations::where('id', $id)->first()->first()->toArray();
-            Log::debug($allClients);
+            $allClients[] = Integrations::where('id', $id)->first()->toArray();
         };
 
 

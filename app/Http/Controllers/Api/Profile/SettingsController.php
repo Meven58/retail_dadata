@@ -18,7 +18,6 @@ class SettingsController extends Controller
         $integration = Integrations::where('id', $id)->first();
         $client = SimpleClientFactory::createClient($integration['retail_url'], $integration['retail_token']);
         $customersCorporate = $client->customersCorporate->list();
-        Log::debug([$customersCorporate]);
         if (empty($integration)) {
             return abort(404);
         }
